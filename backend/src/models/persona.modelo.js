@@ -1,8 +1,8 @@
-const mongoose = require('mongoose'); 
+import { Schema, model } from 'mongoose'; 
 
 
 
-const PersonaSchema = mongoose.Schema({
+const PersonaSchema = Schema({
     nombre: { 
         type: String,
         required: true,
@@ -25,7 +25,7 @@ const PersonaSchema = mongoose.Schema({
     roles : [
         {
             ref: "Role",
-            type: mongoose.Schema.Types.ObjectId,
+            type: Schema.Types.ObjectId,
         },
     ], 
 }, 
@@ -35,5 +35,5 @@ const PersonaSchema = mongoose.Schema({
 
 ); 
 
-const Persona = mongoose.model('Persona', PersonaSchema); 
-module.exports = Persona;
+const Persona = model('Persona', PersonaSchema); 
+export default Persona;
