@@ -6,3 +6,5 @@ const router = Router();
 
 router.get('/', getPersonas); 
 router.get('/:id', getOnePersona); 
+
+export default router; 

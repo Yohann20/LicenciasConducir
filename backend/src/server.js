@@ -1,11 +1,13 @@
 import express, { json } from 'express'; 
 import { startConnection } from './config/db.config.js';
+import personaRoutes from './routes/persona.routes.js'; 
+
 const app = express(); 
 const port = 5000; 
 
-
+//middlewares
 app.use(json()); 
-
+app.use('/api/personas', personaRoutes);
 
 
 app.get('/', (req, res) => {
