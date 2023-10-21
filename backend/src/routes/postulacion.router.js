@@ -8,3 +8,5 @@ router.get('/postulacion', obtenerPostulacion);
 router.get('/postulacion/:id', obtenerPostulacionPorId);
 router.post('/postulacion', crearPostulacion);
 router.delete('/postulacion/:id', eliminarPostulacion);
+
+export default router;

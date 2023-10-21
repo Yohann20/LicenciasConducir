@@ -1,0 +1,5 @@
+/*
+Hay que hacer que el funcionario municipal pueda visualizar las postulaciones de licencias de conducir
+para que las pueda validar o rechazar.
+
+*/
