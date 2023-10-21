@@ -1,7 +1,7 @@
 import Persona from '../models/persona.modelo.js'; 
 
 // Obtener una persona
-export async function obtenerPersonas(req, res){
+export async function obtenerPersona(req, res){
     const personas = await Persona.find();
     res.json(personas);
 }

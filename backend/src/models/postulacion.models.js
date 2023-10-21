@@ -27,4 +27,7 @@ const PostulacionSchema = Schema({
         type: String,
         required: true,
     },
-});
+}); 
+
+const Postulacion = model('Postulacion', PostulacionSchema); 
+export default Postulacion;
