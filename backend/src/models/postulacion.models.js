@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose'; 
-
+//FALTA AGREGAR QUE TRAMITE DESEA REALIZAR
 const PostulacionSchema = Schema({
     nombre:{
         type: String,
@@ -24,6 +24,14 @@ const PostulacionSchema = Schema({
         required: true,
     },
     direccion:{
+        type: String,
+        required: true,
+    },
+    documentoPDF:{
+        type: String,
+        required: true,
+    },
+    tramite:{
         type: String,
         required: true,
     },

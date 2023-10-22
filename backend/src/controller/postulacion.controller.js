@@ -6,22 +6,22 @@ export async function crearPostulacion(req, res){
         const { nombre, rut, email, telefono, fechaNacimiento, direccion } = req.body;
         const nuevaPostulacion = new Postulacion({ nombre, rut, email, telefono, fechaNacimiento, direccion });
         const postulacionGuardada = await nuevaPostulacion.save();
-        res.status(201).json(postulacionGuardada)
+        res.status(201).json(postulacionGuardada);
     } catch (error) {
-        console.error(error)
-        res.status(500).json({mensaje: "Error al crear postulacion"})
+        console.error(error);
+        res.status(500).json({mensaje: "Error al crear postulacion"});
     }
     
 }
 
 //Obtener Postulaciones
-export async function obtenerPostulacion(req, res){
+export async function obtenerPostulacion(req, res){  //req sera que tenga el rol de funcionario
     try{
         const postulaciones = await Postulacion.find();
         res.json(postulaciones);
     } catch (error) {
-        console.error(error)
-        res.status(500).json({mensaje: "Error al obtener postulacion"})
+        console.error(error);
+        res.status(500).json({mensaje: "Error al obtener postulacion"});
     }
 }
 
